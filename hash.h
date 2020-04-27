@@ -1,3 +1,6 @@
+//Yu Yao
+//25th Apr
+//PA01 Hash.h
 # ifndef HASH_H
 # define HASH_H
 

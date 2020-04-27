@@ -1,3 +1,6 @@
+//Yu Yao
+//25th APR 
+//PA01 hash.cpp
 # include "hash.h"
 # include <algorithm>
 #include<iostream>
