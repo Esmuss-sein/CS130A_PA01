@@ -11,7 +11,7 @@ using namespace std;
 
 int main(int argv, char** argc){
 	BST b1;
-	Hashtable h1;
+	Hash h1;
 	ifstream file("/autograder/submission/PA1_dataset.txt");
 	string word;
 	while(getline(file, word)){
@@ -43,7 +43,7 @@ int main(int argv, char** argc){
 		else if(s.substr(0,6).compare("delete")==0){
 			b1.remove(s.substr(7));
 			b1.removePrint(s.substr(7));
-			h1.deletew(s.substr(7));
+			h1.remove(s.substr(7));
 		}
 		else if(s.substr(0,12).compare("range search")==0){
 			b1.rangeSearch(s.substr(13));

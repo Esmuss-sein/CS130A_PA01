@@ -12,14 +12,14 @@
 
 using namespace std;
 
-class Hashtable {
+class Hash {
     
 	public:
 
-		Hashtable();
+		Hash();
 		void add(string word);
 		void insert(string word);
-		void deletew(string word);
+		void remove(string word);
 		void search(string word);
 		void rangeSearch (string s);
     

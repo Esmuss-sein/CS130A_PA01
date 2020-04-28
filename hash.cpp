@@ -7,9 +7,9 @@
 #include<list>
 using namespace std;
 
-Hashtable :: Hashtable() {}
+Hash :: Hash() {}
 
-size_t Hashtable :: hash(string word) const {
+size_t Hash :: hash(string word) const {
 	size_t accumulator = 0;
     
 	for (size_t i = 0; i< word.size(); i++){
@@ -20,7 +20,7 @@ size_t Hashtable :: hash(string word) const {
 
 }
 
-void Hashtable :: add(string word){
+void Hash :: add(string word){
     
 	int index = hash(word);
     
@@ -33,7 +33,7 @@ void Hashtable :: add(string word){
     
 	table[index].push_back(pair<string,size_t>(word,1));
 }
-void Hashtable:: deletew(string word){
+void Hash:: remove(string word){
     
 	int index= hash(word);
     
@@ -52,7 +52,7 @@ void Hashtable:: deletew(string word){
 		}
 	}
 }
-void Hashtable :: search(string word){
+void Hash :: search(string word){
     
 	int index= hash(word);
     
@@ -64,7 +64,7 @@ void Hashtable :: search(string word){
 	}
 	cout<<word<<" not found"<<endl;		
 }
-void Hashtable :: insert(string word){
+void Hash :: insert(string word){
     
 	int index = hash(word);
     
@@ -79,7 +79,7 @@ void Hashtable :: insert(string word){
 	table[index].push_back(pair<string,size_t>(word,1));
 	cout<<word<<" inserted, new count = 1"<<endl;
 }
-void Hashtable :: rangeSearchhelper(string str1, string str2){
+void Hash :: rangeSearchhelper(string str1, string str2){
     
 	list<string> l;
     
@@ -97,7 +97,7 @@ void Hashtable :: rangeSearchhelper(string str1, string str2){
 	}	
 }
 
-void Hashtable :: rangeSearch(string s){
+void Hash :: rangeSearch(string s){
   	string str1;
   	string str2;
   	for (size_t i = 0; i<s.length(); i++){
